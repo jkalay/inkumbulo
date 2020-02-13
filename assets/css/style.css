@@ -135,3 +135,29 @@ main {
 .is-hidden {
   display: none;
 }
+
+.modal {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+}
+
+.modal-inner {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-img {
+  border-radius: 30%;
+  height: 75%;
+  width: 75%;
+}
+
+.modal-win-msg {
+  font-size: 2rem;
+}

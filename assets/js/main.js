@@ -15,6 +15,8 @@ var animals = [
   "zebra"
 ];
 var deck = animals.concat(animals);
+var maxMatches = 9;
+var matches = 0;
 
 shuffle();
 addCardClassesToDOM();
@@ -38,6 +40,8 @@ function handleClick(event) {
 
     if (firstCardClasses == secondCardClasses) {
       gameBoard.addEventListener("click", handleClick);
+      matches += 1;
+      checkMatches();
       firstCardClicked = secondCardClicked = null;
     } else {
       setTimeout(function delay() {
@@ -64,4 +68,11 @@ function addCardClassesToDOM() {
   cards.forEach((card, index) => {
     card.classList.add(`card-${deck[index]}`);
   })
+}
+
+function checkMatches() {
+  if (matches == maxMatches) {
+    var winModal = document.querySelector(".modal-win");
+    winModal.classList.remove("is-hidden");
+  }
 }
