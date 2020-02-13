@@ -22,6 +22,7 @@ var matches = 0;
 
 shuffle();
 addCardClassesToDOM();
+displayStats();
 gameBoard.addEventListener("click", handleClick);
 
 function handleClick(event) {
@@ -88,5 +89,9 @@ function displayStats() {
 }
 
 function calculateAccuracy(attempts, matches) {
+  if (attempts == 0 && matches == 0) {
+    return "0.00%";
+  }
+
   return ((matches / attempts) * 100).toFixed(2) + "%";
 }
