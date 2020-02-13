@@ -57,8 +57,10 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
+  cursor: pointer;
   height: 30%;
   position: relative;
+  perspective: 500px;
 
   /* Card flip effect from tutorial: https://3dtransforms.desandro.com/card-flip */
   transition: transform 1s;
