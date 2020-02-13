@@ -1,0 +1,13 @@
+body {
+  background: url(../images/africa.jpg);
+  background-attachment: fixed;
+  background-color: #301d1d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 97vh;
+}
+
+.container {
+  height: 100%;
+}
