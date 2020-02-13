@@ -102,3 +102,7 @@ main {
 .card-zebra {
   background-image: url(../images/zebra.jpg);
 }
+
+.hide {
+  display: none;
+}
