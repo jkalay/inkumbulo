@@ -15,6 +15,8 @@ var animals = [
   "zebra"
 ];
 var deck = animals.concat(animals);
+var attempts = 0;
+var gamesPlayed = 0;
 var maxMatches = 9;
 var matches = 0;
 
@@ -34,6 +36,7 @@ function handleClick(event) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className;
   } else {
+    attempts += 1;
     gameBoard.removeEventListener("click", handleClick);
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
@@ -51,6 +54,7 @@ function handleClick(event) {
         gameBoard.addEventListener("click", handleClick);
       }, 1500);
     }
+    displayStats();
   }
 }
 
@@ -67,7 +71,7 @@ function addCardClassesToDOM() {
 
   cards.forEach((card, index) => {
     card.classList.add(`card-${deck[index]}`);
-  })
+  });
 }
 
 function checkMatches() {
@@ -75,4 +79,14 @@ function checkMatches() {
     var winModal = document.querySelector(".modal-win");
     winModal.classList.remove("is-hidden");
   }
+}
+
+function displayStats() {
+  document.getElementById("games").textContent = gamesPlayed;
+  document.getElementById("attempts").textContent = attempts;
+  document.getElementById("accuracy").textContent = calculateAccuracy(attempts, matches);
+}
+
+function calculateAccuracy(attempts, matches) {
+  return ((matches / attempts) * 100).toFixed(2) + "%";
 }
