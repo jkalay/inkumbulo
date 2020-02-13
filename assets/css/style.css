@@ -7,6 +7,7 @@ body {
   background-size: cover;
   color: #efe;
   height: 97vh;
+  margin: 0;
 }
 
 .container > :first-child {
@@ -39,51 +40,55 @@ main {
   justify-content: space-evenly;
 }
 
-main > div {
-  background-image: url(../images/card.jpg);
+.card {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
   height: 30%;
+  position: relative;
 }
 
 @media (min-width: 768px) {
-  main > div {
+  .card {
     background-position: left bottom;
   }
 }
 
 .card-front, .card-back {
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  position: absolute;
   width: 100%;
 }
 
+.card-back {
+  background-image: url(../images/card.jpg);
+}
+
 .card-crocodile {
-  background-image: url(..images/crocodile.jpg);
+  background-image: url(../images/crocodile.jpg);
 }
 
 .card-dog {
-  background-image: url(..images/dog.jpg);
+  background-image: url(../images/dog.jpg);
 }
 
 .card-elephant {
-  background-image: url(..images/elephant.jpg);
+  background-image: url(../images/elephant.png);
 }
 
 .card-giraffe {
-  background-image: url(..images/giraffe.jpg);
+  background-image: url(../images/giraffe.jpg);
 }
 
 .card-hippo {
-  background-image: url(..images/hippo.jpg);
+  background-image: url(../images/hippo.jpg);
 }
 
 .card-leopard {
-  background-image: url(..images/leopard.jpg);
+  background-image: url(../images/leopard.jpg);
 }
 
 .card-lion {
@@ -91,9 +96,9 @@ main > div {
 }
 
 .card-rhino {
-  background-image: url(..images/rhino.jpg);
+  background-image: url(../images/rhino.jpg);
 }
 
 .card-zebra {
-  background-image: url(..images/zebra.jpg);
+  background-image: url(../images/zebra.jpg);
 }
