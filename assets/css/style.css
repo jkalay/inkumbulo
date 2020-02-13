@@ -53,3 +53,47 @@ main > div {
     background-position: left bottom;
   }
 }
+
+.card-front, .card-back {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-crocodile {
+  background-image: url(..images/crocodile.jpg);
+}
+
+.card-dog {
+  background-image: url(..images/dog.jpg);
+}
+
+.card-elephant {
+  background-image: url(..images/elephant.jpg);
+}
+
+.card-giraffe {
+  background-image: url(..images/giraffe.jpg);
+}
+
+.card-hippo {
+  background-image: url(..images/hippo.jpg);
+}
+
+.card-leopard {
+  background-image: url(..images/leopard.jpg);
+}
+
+.card-lion {
+  background-image: url(../images/lion.jpg);
+}
+
+.card-rhino {
+  background-image: url(..images/rhino.jpg);
+}
+
+.card-zebra {
+  background-image: url(..images/zebra.jpg);
+}
