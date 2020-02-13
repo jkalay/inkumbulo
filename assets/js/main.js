@@ -12,7 +12,7 @@ function handleClick(event) {
   }
 
   var flipCard = event.target;
-  flipCard.className += " hide";
+  flipCard.parentElement.classList.add("is-flipped");
 
   if (firstCardClicked == null) {
     firstCardClicked = event.target;
@@ -29,8 +29,8 @@ function handleClick(event) {
     }
     else {
       setTimeout(function delay() {
-        firstCardClicked.classList.remove("hide");
-        secondCardClicked.classList.remove("hide");
+        firstCardClicked.parentElement.classList.remove("is-flipped");
+        secondCardClicked.parentElement.classList.remove("is-flipped");
         firstCardClicked = secondCardClicked = null;
         gameBoard.addEventListener("click", handleClick);
       }, 1500);

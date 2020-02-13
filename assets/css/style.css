@@ -1,5 +1,5 @@
 body {
-  background: url(../images/africa.jpg);
+  background: url(../images/bg.jpg);
   background-attachment: fixed;
   background-color: #301d1d;
   background-position: center;
@@ -47,6 +47,10 @@ main {
   border-radius: 5px;
   height: 30%;
   position: relative;
+
+  /* Card flip effect from tutorial: https://3dtransforms.desandro.com/card-flip */
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 @media (min-width: 768px) {
@@ -56,15 +60,26 @@ main {
 }
 
 .card-front, .card-back {
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   position: absolute;
   width: 100%;
+
+  backface-visibility: hidden;
 }
 
 .card-back {
   background-image: url(../images/card.jpg);
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.is-flipped {
+  transform: rotateY(180deg);
 }
 
 .card-crocodile {
@@ -103,6 +118,6 @@ main {
   background-image: url(../images/zebra.jpg);
 }
 
-.hide {
+.is-hidden {
   display: none;
 }
