@@ -1,3 +1,7 @@
+:root {
+  font-size: 1em;
+}
+
 body {
   background: url(../images/bg.jpg);
   background-attachment: fixed;
@@ -6,8 +10,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #efe;
+  font-family: "Neucha", cursive;
   height: 97vh;
   margin: 0;
+}
+
+h1 {
+  font-family: "Lalezar", cursive;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .container > :first-child {
