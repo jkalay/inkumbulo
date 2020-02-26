@@ -19,11 +19,13 @@ var attempts = 0;
 var gamesPlayed = 0;
 var maxMatches = 9;
 var matches = 0;
+var reset = document.getElementById("reset");
 
 shuffle();
 addCardClassesToDOM();
 displayStats();
 gameBoard.addEventListener("click", handleClick);
+reset.addEventListener("click", resetGame);
 
 function handleClick(event) {
   if (!event.target.className.includes("card-back")) {
@@ -94,4 +96,18 @@ function calculateAccuracy(attempts, matches) {
   }
 
   return ((matches / attempts) * 100).toFixed(2) + "%";
+}
+
+function resetGame() {
+  var cards = document.querySelectorAll(".card-front");
+  attempts = matches = 0;
+  gamesPlayed += 1;
+
+  cards.forEach((card) => {
+    card.className = "card card-front";
+    card.parentElement.classList.remove("is-flipped");
+  });
+  shuffle();
+  addCardClassesToDOM();
+  displayStats();
 }

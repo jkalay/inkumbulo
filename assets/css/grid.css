@@ -3,9 +3,12 @@
   width: 100%;
   max-width: 1500px;
   margin: auto;
+  margin-top: 1em;
+  overflow: hidden;
 }
 
 .row {
+  height: 100%;
   width: 100%;
   display: flex;
   margin-bottom: 0.5rem;

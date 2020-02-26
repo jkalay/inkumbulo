@@ -11,13 +11,8 @@
   <body>
     <div class="container">
       <div class="row">
-        <header>
-          <h1>Memory Safari</h1>
-        </header>
-      </div>
-      <div class="row">
         <aside class="col-2">
-          <div><p class="subheading reset">Reset &#8635;</p></div>
+          <div><p id="reset" class="reset">Reset &#8635;</p></div>
           <div><p class="subheading">Games:</p></div>
           <div><p id="games" class="value">0</p></div>
           <div><p class="subheading">Attempts:</p></div>
@@ -99,6 +94,12 @@
             <div class="card card-back"></div>
           </div>
         </main>
+      </div>
+    </div>
+    <div class="modal modal-intro is-hidden">
+      <div class="modal-inner">
+        <h1>Memory Safari</h1>
+        <img class="modal-img" src="assets/images/safari.gif">
       </div>
     </div>
     <div class="modal modal-win is-hidden">
