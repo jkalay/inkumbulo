@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inkumbulo</title>
-    <link href="https://fonts.googleapis.com/css?family=Lalezar|Neucha&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lalezar|Neucha&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/grid.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div id="game" class="container is-hidden">
@@ -96,17 +99,21 @@
         </main>
       </div>
     </div>
-    <div id="intro-modal" class="modal modal-intro">
+    <div id="intro-modal" class="modal modal-intro is-hidden">
       <div class="modal-inner">
         <h1>Inkumbulo</h1>
-        <p class="modal-promo">Test your <em>inkumbulo</em> (Zulu for "memory") on this African safari.</p>
+        <p class="modal-promo">
+          Test your <em>inkumbulo</em> (Zulu for "memory") on this African
+          safari.
+        </p>
         <p id="play" class="btn">Play</p>
       </div>
     </div>
-    <div id="win-modal" class="modal modal-win is-hidden">
+    <div id="win-modal" class="modal modal-win">
       <div class="modal-inner">
-        <img class="modal-img" src="assets/images/safari.gif">
-        <h2 class="modal-win-msg" lang="zu">Ukuhalalisela!</p>
+        <h2 class="modal-win-msg">Congratulations!</h2>
+        <img class="modal-img" src="assets/images/safari.gif" />
+        <p id="replay" class="btn">Replay</p>
       </div>
     </div>
     <script src="assets/js/main.js"></script>

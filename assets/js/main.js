@@ -23,6 +23,7 @@ var gameContainer = document.getElementById('game');
 var introModal = document.getElementById('intro-modal');
 var winModal = document.getElementById('win-modal');
 var play = document.getElementById('play');
+var replay = document.getElementById('replay');
 var reset = document.getElementById('reset');
 
 shuffle();
@@ -30,6 +31,7 @@ addCardClassesToDOM();
 displayStats();
 gameBoard.addEventListener('click', handleClick);
 play.addEventListener('click', startGame);
+replay.addEventListener('click', replayGame);
 reset.addEventListener('click', resetGame);
 
 function handleClick(event) {
@@ -84,7 +86,6 @@ function addCardClassesToDOM() {
 
 function checkMatches() {
   if (matches == maxMatches) {
-    var winModal = document.querySelector('.modal-win');
     winModal.classList.remove('is-hidden');
   }
 }
@@ -118,6 +119,12 @@ function resetGame() {
   shuffle();
   addCardClassesToDOM();
   displayStats();
+}
+
+function replayGame() {
+  resetGame();
+  winModal.classList.add('is-hidden');
+  gameContainer.classList.remove('is-hidden');
 }
 
 function startGame() {
