@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory</title>
+    <title>Inkumbulo</title>
     <link href="https://fonts.googleapis.com/css?family=Lalezar|Neucha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/grid.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <div class="container">
+    <div id="game" class="container is-hidden">
       <div class="row">
         <aside class="col-2">
-          <div><p id="reset" class="reset">Reset &#8635;</p></div>
+          <div><p id="reset" class="btn">Reset &#8635;</p></div>
           <div><p class="subheading">Games:</p></div>
           <div><p id="games" class="value">0</p></div>
           <div><p class="subheading">Attempts:</p></div>
@@ -96,13 +96,14 @@
         </main>
       </div>
     </div>
-    <div class="modal modal-intro is-hidden">
+    <div id="intro-modal" class="modal modal-intro">
       <div class="modal-inner">
-        <h1>Memory Safari</h1>
-        <img class="modal-img" src="assets/images/safari.gif">
+        <h1>Inkumbulo</h1>
+        <p class="modal-promo">Test your <em>inkumbulo</em> (Zulu for "memory") on this African safari.</p>
+        <p id="play" class="btn">Play</p>
       </div>
     </div>
-    <div class="modal modal-win is-hidden">
+    <div id="win-modal" class="modal modal-win is-hidden">
       <div class="modal-inner">
         <img class="modal-img" src="assets/images/safari.gif">
         <h2 class="modal-win-msg" lang="zu">Ukuhalalisela!</p>
