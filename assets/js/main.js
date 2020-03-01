@@ -86,6 +86,7 @@ function addCardClassesToDOM() {
 
 function checkMatches() {
   if (matches == maxMatches) {
+    gameContainer.classList.add('is-hidden');
     winModal.classList.remove('is-hidden');
   }
 }
